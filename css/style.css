@@ -240,10 +240,14 @@ body {
 
 /* انیمیشن حرکت از راست برای بخش فرم تماس */
 #contact {
+  background: linear-gradient(rgba(5, 5, 8, 0.85), rgba(5, 5, 8, 0.9)), 
+              url('../image/pricing-bg.jpg') no-repeat center center/cover !important;
+  background-attachment: fixed;
   opacity: 0;
-  transform: translateX(100px);
-  animation: smoothSlideInRight 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  transform: translateX(-100px);
+  animation: smoothSlideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.1s;
+
 }
 
 #contact .text-muted {
@@ -270,91 +274,7 @@ body {
   opacity: 1;
 }
 
-/* ==========================================================================
-   ۸. استایل‌های اختصاصی صفحه وبلاگ (Blog)
-   ========================================================================== */
-body {
-  /* عکس پس‌زمینه برای کل صفحه */
-  background: linear-gradient(rgba(33, 76, 94, 0.85), rgba(5, 5, 8, 0.95)), 
-              url('../image/cyber.jpg') no-repeat center center fixed;
-  background-size: cover;
-  
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #ffffff;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-.blog-header {
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  background: linear-gradient(rgba(5, 5, 8, 0.75), rgba(5, 5, 8, 0.9)),
-              url('../image/hero.jpg') no-repeat center center/cover !important;
-
-  background-attachment: fixed;
-  border-bottom: 1px solid #1f1f2e !important;
-}
-.blog-header {
-  /* تنظیم ارتفاع برای اینکه عکس به خوبی دیده شود */
-  min-height: 400px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* اصلاح آدرس عکس */
-  background: linear-gradient(rgba(5, 5, 8, 0.75), rgba(5, 5, 8, 0.9)), 
-              url('../image/hero.jpg') no-repeat center center/cover !important;
-  
-  background-attachment: fixed;
-  border-bottom: 1px solid #1f1f2e !important;
-}
-
-
-
-.blog-img-container {
-  position: relative;
-  overflow: hidden;
-  max-height: 350px;
-  
-}
-
-.blog-card:hover .blog-post-img {
-  transform: scale(1.05);
-
-}
-.blog-card p {
-  color: #d6d6f5 !important;
-  line-height: 1.7;
-
-}
-
-.blog-post-img {
-  transition: transform 0.5s ease;
-  object-fit: cover;
-}
-
-.blog-date-badge {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #00ffcc;
-  color: #000000;
-  padding: 10px 15px;
-  text-align: center;
-  border-radius: 4px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
-  z-index: 2;
-}
-
-.blog-card-wrapper {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: blogPostFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-
-}
 
 /* ==========================================================================
    ۹. بخش فوتر (Footer)
@@ -493,4 +413,13 @@ img, video, .container, .row {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+}
+.hero-img {
+    height: 90vh;
+    object-fit: cover;
+    filter: brightness(45%);
+}
+
+.hero-caption {
+    bottom: 80px;
 }
